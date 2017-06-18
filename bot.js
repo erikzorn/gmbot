@@ -203,15 +203,15 @@ function postMessage() {
   var randostring;
   var infrequentresponse;
 
-  if (infrequent % 10 == 0) {
+  if (infrequent % 3 == 0) {
     infrequentresponse = "Hey " + name + ", did you know " + funFacts[randomfunfact]
   }
 
-  else if (infrequent % 10 == 1) {
+  else if (infrequent % 3 == 1) {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + " " + animals[randomanimal]
   }
 
-
+/*
 
   if (randomresponse == 0) {
     randostring = "fuk u " + name
@@ -219,7 +219,7 @@ function postMessage() {
   else {
     randostring = name + " pls"
   }
-
+*/
 
   botResponse = cool();
 
