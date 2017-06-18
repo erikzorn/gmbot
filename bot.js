@@ -173,7 +173,7 @@ function respond() {
 
 
 
-  if (userId != '345971"') {
+  if (userId != '382629') {
   //if (sender_type != bot) {
     if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
