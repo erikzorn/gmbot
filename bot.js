@@ -252,6 +252,7 @@ function postMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
+console.log("***response: "respond + " ***");
 
 
 exports.respond = respond;
