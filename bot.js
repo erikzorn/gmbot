@@ -152,6 +152,7 @@ function respond() {
   // toSend = request.text.substring(5,request.text.length)
 
   r = JSON.stringify(request, null, 4);
+  console.log(r);
   // rileyNamelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
   // rileyName = rileyNamelong.substring(0, rileyNamelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
