@@ -198,8 +198,8 @@ function respond() {
     res.setEncoding('utf8');
     rawData = '';
     res.on('data', function(chunk) { rawData += chunk; });
-    /*
-    res.on('end', () => {
+    
+    res.on('end', function() {
       try {
         const parsedData = JSON.parse(rawData);
         console.log(parsedData);
@@ -210,10 +210,10 @@ function respond() {
         console.error(e.message);
       }
     });
-    */
+    
   });
 
-cleverResponse = "test this bitch";
+//cleverResponse = "test this bitch";
 
 //////////******************************
 
