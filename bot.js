@@ -197,6 +197,7 @@ function respond() {
     res.setEncoding('utf8');
     let rawData = '';
     res.on('data', (chunk) => { rawData += chunk; });
+    /*
     res.on('end', () => {
       try {
         const parsedData = JSON.parse(rawData);
@@ -208,9 +209,10 @@ function respond() {
         console.error(e.message);
       }
     });
+    */
   });
 
-//cleverResponse = "test this bitch";
+cleverResponse = "test this bitch";
 
 //////////******************************
 
