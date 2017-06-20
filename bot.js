@@ -183,9 +183,10 @@ function respond() {
 
 //***************************************
 //str = process.argv[2];
-  input = message.split(' ').join('+');
+  //input = message.split(' ').join('+');
+  console.log("name: " + name + "      messageL "+ message);
   console.log("input ======= : " + input);
-  theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
+  //theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
 
 /*
   http.get(theUrl, (res) => {
