@@ -22,6 +22,7 @@ var cool = require('cool-ascii-faces');
 var str;
 var input;
 var theUrl;
+var cleverResponse;
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
 var botID = process.env.BOT_ID;
@@ -139,6 +140,7 @@ var userId;
 // var group_id;
 // var id;
 var name;
+var message;
 
 
 /* I am still unsure if this is used */
@@ -166,6 +168,7 @@ function respond() {
   /* set variables to JSON correspondent */
   // attatchments = request.attatchments;
   name = request.name;
+  message = request["message"];
   // avatar_url = request.avatar_url;
   // created_at = request.created_at;
   // group_id = request.group_id;
@@ -176,6 +179,39 @@ function respond() {
   // system = request.system;
   // text = request.text;
   // user_id = request.user_id;
+
+
+//***************************************
+//str = process.argv[2];
+  input = message.split(' ').join('+');
+  theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
+
+
+  http.get(theUrl, (res) => {
+    const { statusCode } = res;
+    const contentType = res.headers['content-type'];
+    //console.log(JSON.parse(res));
+
+    res.setEncoding('utf8');
+    let rawData = '';
+    res.on('data', (chunk) => { rawData += chunk; });
+    res.on('end', () => {
+      try {
+        const parsedData = JSON.parse(rawData);
+        console.log(parsedData);
+        console.log(parsedData["output"]);
+        cleverResponse = parsedData["output"];
+        cState = parsedData["conversation_id"]
+      } catch (e) {
+        console.error(e.message);
+      }
+    });
+  });
+
+
+//////////******************************
+
+
 
 
 
@@ -199,6 +235,8 @@ function respond() {
 /* This function generates a message to be posted to by the bot */
 function postMessage() {
   var botResponse, options, body, botReq;
+
+  /*** commented out by erik ****
   randombake = Math.floor(Math.random() * (bakes.length - 0 + 1)) + 0;
   randomadj = Math.floor(Math.random() * (adjectives.length - 0 + 1)) + 0;
   randomanimal = Math.floor(Math.random() * (animals.length - 0 + 1)) + 0;
@@ -217,7 +255,6 @@ function postMessage() {
     infrequentresponse = "Damn " + name + ", has anyone ever told you that you kinda look like a " + adjectives[randomadj] + " " + animals[randomanimal]
   }
 
-/*
 
   if (randomresponse == 0) {
     randostring = "fuk u " + name
@@ -237,7 +274,8 @@ function postMessage() {
 
   body = {
    "bot_id" : botID,
-   "text" : infrequentresponse
+   //"text" : infrequentresponse
+   "text" : cleverResponse;
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
