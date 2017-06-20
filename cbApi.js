@@ -37,7 +37,7 @@ var cState = "";
 	theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
 
 
-	http.get(theUrl, (res) => {
+	http.get(theUrl, function(res){
 	  const { statusCode } = res;
 	  const contentType = res.headers['content-type'];
 	  //console.log(JSON.parse(res));
