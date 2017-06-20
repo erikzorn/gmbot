@@ -23,6 +23,7 @@ var str;
 var input;
 var theUrl;
 var cleverResponse;
+var rawData;
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
 var botID = process.env.BOT_ID;
@@ -195,8 +196,8 @@ function respond() {
     //console.log(JSON.parse(res));
 
     res.setEncoding('utf8');
-    let rawData = '';
-    res.on('data', (chunk) => { rawData += chunk; });
+    rawData = '';
+    res.on('data', function(chunk) { rawData += chunk; });
     /*
     res.on('end', () => {
       try {

@@ -31,6 +31,7 @@ var str;
 var input;
 var theUrl;
 var cState = "";
+var rawData;
 //while(true) {
 	str = process.argv[2];
 	input = str.split(' ').join('+');
@@ -38,13 +39,13 @@ var cState = "";
 
 
 	http.get(theUrl, function(res){
-	  const { statusCode } = res;
+	  //const { statusCode } = res;
 	  const contentType = res.headers['content-type'];
 	  //console.log(JSON.parse(res));
 
 	  res.setEncoding('utf8');
-	  let rawData = '';
-	  res.on('data', (chunk) => { rawData += chunk; });
+	  rawData = '';
+	  res.on('data', function(chunk) { rawData += chunk; });
 	  res.on('end', () => {
 	    try {
 	      const parsedData = JSON.parse(rawData);
