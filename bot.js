@@ -151,7 +151,9 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]), //length is one
       botRegex = /./;
       //botRegex = /^\/cool guy$/;
-
+  if (request["sender_id"] === "382629") {
+    return;
+  }
 
   // toSend = request.text.substring(5,request.text.length)
 
@@ -177,7 +179,7 @@ function respond() {
 
 
 
-  if (userId != '382629') {
+  if (request["sender_id"] != '382629') {
   //if (sender_type != bot) {
     if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
