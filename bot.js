@@ -168,7 +168,7 @@ function respond() {
   /* set variables to JSON correspondent */
   // attatchments = request.attatchments;
   name = request.name;
-  message = request["message"];
+  message = request.message;
   // avatar_url = request.avatar_url;
   // created_at = request.created_at;
   // group_id = request.group_id;
@@ -184,6 +184,7 @@ function respond() {
 //***************************************
 //str = process.argv[2];
   input = message.split(' ').join('+');
+  console.log("input ======= : " + input);
   theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
 
 /*
