@@ -201,7 +201,7 @@ function respond() {
         console.log(parsedData);
         console.log(parsedData["output"]);
         cleverResponse = parsedData["output"];
-        cState = parsedData["conversation_id"]
+       // cState = parsedData["conversation_id"]
       } catch (e) {
         console.error(e.message);
       }
@@ -275,7 +275,7 @@ function postMessage() {
   body = {
    "bot_id" : botID,
    //"text" : infrequentresponse
-   "text" : cleverResponse;
+   "text" : cleverResponse,
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
