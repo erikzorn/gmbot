@@ -16,8 +16,12 @@
 // 1 contributor
 // RawBlameHistory     
 // Executable File  246 lines (210 sloc)  11.8 KB
+const http = require('http');
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var str;
+var input;
+var theUrl;
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
 var botID = process.env.BOT_ID;
@@ -152,7 +156,7 @@ function respond() {
   // toSend = request.text.substring(5,request.text.length)
 
   r = JSON.stringify(request, null, 4);
-  console.log(r);
+  console.log("*****/n/n/n******/n" +r +"/n******/n/n/n*****" );
   // rileyNamelong = r.substring(r.indexOf('"name":') + 9, (r.indexOf('"sender_id":') - 4))
   // rileyName = rileyNamelong.substring(0, rileyNamelong.length - 3)
   userId = r.substring(r.indexOf('user_id":') + 11, r.indexOf('user_id":') + 18)
