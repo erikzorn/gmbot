@@ -190,7 +190,7 @@ function respond() {
 
 
   http.get(theUrl, function(res) {
-    const { statusCode } = res;
+    //const { statusCode } = res;
     const contentType = res.headers['content-type'];
     //console.log(JSON.parse(res));
 
