@@ -188,7 +188,7 @@ function respond() {
   console.log("input ======= : " + input);
   theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input;// + "&cs=" + cState;
 
-/*
+
   http.get(theUrl, (res) => {
     const { statusCode } = res;
     const contentType = res.headers['content-type'];
@@ -209,8 +209,8 @@ function respond() {
       }
     });
   });
-*/
-cleverResponse = "test this bitch";
+
+//cleverResponse = "test this bitch";
 
 //////////******************************
 
