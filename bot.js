@@ -183,8 +183,8 @@ function respond() {
 
 //***************************************
 //str = process.argv[2];
-  input = text.split(' ').join('+');
-  console.log("name: " + name + "      messageL "+ text);
+  input = message.split(' ').join('+');
+  console.log("name: " + name + "      message: "+ message + "    w/o spaces: " + input);
   console.log("input ======= : " + input);
   theUrl = "http://www.cleverbot.com/getreply?key=CC2szqo8wJx9YX2uLlfEgMpcN-g" + "&input=" + input + "&cs=" + cState;
 
