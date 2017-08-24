@@ -26,7 +26,7 @@ var cleverResponse;
 var rawData;
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
-var botID = process.env.BOT_ID;
+var botID = '761dfef36a37dedddcc8a55883'; //process.env.BOT_ID;
 
 /* A dictionary of assorted adjectives. Used for generated responses */
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate", 
