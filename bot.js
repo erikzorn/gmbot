@@ -154,7 +154,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]), //length is one
       botRegex = /./;
       //botRegex = /^\/cool guy$/;
-  if (request["sender_id"] === "382629") {
+  if (request["sender_id"] === "527303") {
     return;
   }
 
