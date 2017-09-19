@@ -26,7 +26,7 @@ var cleverResponse;
 var rawData;
 
 /* sets botID. You will need to change your .env file so that you have this working correctly. Or you may hardcode your botID here. */
-var botID = '761dfef36a37dedddcc8a55883'; //process.env.BOT_ID;
+var botID = 'e5139cf6c0e1dcccb3997c2f41' // '761dfef36a37dedddcc8a55883'; //process.env.BOT_ID;
 
 /* A dictionary of assorted adjectives. Used for generated responses */
 var adjectives = ["abandoned", "able", "absolute", "adorable", "adventerous", "academic", "acceptable", "acclaimed", "accomplished", "accurate", 
@@ -57,43 +57,7 @@ var animals = ["aardvark", "albatross", "alligator", "alpaca", "anteater", "arma
 "wallaby", "weasel", "whippersnapper", "wombat", "zebra"]
 
 /* A dictionary of assorted bakes. Used for generated responses */
-var bakes = ["look at yo 'velis false' jeans",
-"ol next friday pinky",
-"you look like a japanese snappin billy GOAT",
-"get off the computer and Lose some WEIGHT",
-"I dont understand why everybody gotta HATE",
-"I only fucks with lil b &kids bop.! -_____-",
-"get off the computer and Lose some WEIGHT",
-"where yall going, can i go too.? HELL NAWW.!!!",
-"big Worm without the perm neckahh",
-"only time i ever came close to fuckin is when I typed in http://pornhub.com  lookin ass ..  coco butter over deez hoes faceahh ",
-"smushed toostie roll dat done been stepped on by 6 big ass niggas",
-"Chris Brown before he thought about hitting Rihanna lookin .. The only time i get high is if another nigga roll the blunt",
-"ol' stank breath chewing on gum blowing ass bubbles",
-"ol' fubu walmart no style havin'",
-"ol' southpark both feet moving at the same damn time ",
-"lap dance givin hippo neck ass foot workin goose 'jing a lang jing a lang.. U GONE EAT YO CORNBREAD'",
-"melted sour patch kidz and spoiled tuna fish eating azz.",
-"egg Nog 50% off after. Christmas buying azz.",
-"ole swole chest skinny leg havin azz",
-"ole sketchers shape-upz wearin ass",
-"'uh un don't throw dem cans away, I'm goin to turn dem in tomorrow' ole shoopin cart pushin ass", 
-"with your boot nose ass, loose tobacco smellin ass...wrestlin mat smellin ass", 
-"Butter back bacon neck ass, look like yo ass fuck car mufflers and midgets boa ", 
-"look like yo ass sell dvds and socks on madison and pulaski ol super dome head ass", 
-"look mommy, im a big kid now!", 
-"Lookin ass gheri curl wit a hi top fade lookin ass", 
-"Ole camouflage snuggie wearin ass", 
-"Ole la gear light up shoes havin ass", 
-"Ole bushwackin ass nikkah ", 
-"Ole boosie fade wit a rat tail in da back havin azz boi ", 
-"Ole yo gabba gabba yellow shirt orange pants wearin ass nikkah", 
-"Ole clip my toenails in the sink ass", 
-"Lego. Ole Lego my eggo waffle eatin ass", 
-"Ole chat line callin ass nikkah. Meet bitches on Craigslist ass boi.", 
-"Ole yellow hard hat blue jean cutoff wit sum buckwheat Tim's wearin ass nikkah!!!", 
-"ole lunchable eatin ass boi. Ole I think I can I think I can little engine that could ass boi."
-]
+
 
 var dolanLibrary = ["fuk u", "pls"]
 
