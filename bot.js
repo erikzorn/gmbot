@@ -191,7 +191,7 @@ function respond() {
     this.res.writeHead(200);
     setTimeout(postMessage, 3000);
     this.res.end();
-    } 
+     
   } 
   else {
     console.log("don't care");
