@@ -177,7 +177,6 @@ function respond() {
     
   });
 
-//cleverResponse = "test this bitch";
 
 //////////******************************
 
@@ -185,20 +184,21 @@ function respond() {
 
 
 
-  var callback = postMessage();
-  if(request.text && botRegex.test(request.text)) {
-    toSend = request.text;
-    this.res.writeHead(200);
-    setTimeout(callback, 3000);
-    this.res.end();
-     
+  if (request["sender_id"] != '382629') {
+  //if (sender_type != bot) {
+    if(request.text && botRegex.test(request.text)) {
+      toSend = request.text;
+      this.res.writeHead(200);
+      setTimeout(postMessage, 3000);
+      this.res.end();
+    } 
   } 
   else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
-
+}
 
 
 /* This function generates a message to be posted to by the bot */
