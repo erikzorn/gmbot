@@ -185,11 +185,11 @@ function respond() {
 
 
 
-
+  var callback = postMessage();
   if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
-    setTimeout(postMessage, 3000);
+    setTimeout(callback, 3000);
     this.res.end();
      
   } 
