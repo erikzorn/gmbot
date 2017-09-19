@@ -189,7 +189,7 @@ function respond() {
   if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
-    setTimeout(3000, postMessage);
+    setTimeout(postMessage, 3000);
     this.res.end();
     } 
   } 
