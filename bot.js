@@ -185,12 +185,11 @@ function respond() {
 
 
 
-  if (request["sender_id"] != '382629') {
-  //if (sender_type != bot) {
-    if(request.text && botRegex.test(request.text)) {
+
+  if(request.text && botRegex.test(request.text)) {
     toSend = request.text;
     this.res.writeHead(200);
-    postMessage();
+    setTimeout(3000, postMessage);
     this.res.end();
     } 
   } 
@@ -199,7 +198,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-}
+
 
 
 /* This function generates a message to be posted to by the bot */
